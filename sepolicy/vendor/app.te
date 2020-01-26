@@ -1,4 +1,5 @@
 get_prop(appdomain, vendor_camera_prop)
+get_prop(appdomain, persist_camera_prop)
 get_prop({ appdomain -isolated_app }, hal_fingerprint_prop)
 get_prop({ appdomain -isolated_app }, mlipay_prop)
 
