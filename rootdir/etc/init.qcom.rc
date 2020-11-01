@@ -149,6 +149,9 @@ on boot
     mkdir /mnt/vendor/persist/iar_db 0770 system system
     mkdir /mnt/vendor/spunvm 0770 system system
 
+    mkdir /data/vendor_de/0/fpdata
+    chown system system /data/vendor_de/0/fpdata
+
     #Create WIGIG socket area
     mkdir /dev/socket/wigig 0770 wifi wifi
 
