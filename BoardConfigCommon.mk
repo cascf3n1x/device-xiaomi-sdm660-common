@@ -159,10 +159,7 @@ BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
-    /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware \
-    /vendor/bt_firmware:/bt_firmware \
-    /mnt/vendor/persist:/persist
+        /mnt/vendor/persist:/persist
 
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -177,7 +174,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/SEPolicy.mk
+include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
